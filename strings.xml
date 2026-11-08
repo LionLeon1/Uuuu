@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="app_name">Synthesisco Frases</string> <string name="widget_square_desc">Widget cuadrado (2x2) con frase diaria y transparencia ajustable</string> <string name="widget_rect_desc">Widget rectangular (4x2) con frase diaria y transparencia ajustable</string> </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#08151C" android:gravity="center_horizontal" android:orientation="vertical" android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Synthesisco Widgets" android:textColor="#F3A87E" android:textSize="22sp" android:textStyle="bold" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="Ajusta la transparencia del widget de 0% (totalmente transparente) a 100% (totalmente opaco)." android:textColor="#9CB3C0" android:textSize="14sp" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="24dp" android:background="#163849" android:padding="20dp">
+        <include layout="@layout/widget_layout" />
+    </FrameLayout>
+    <TextView android:id="@+id/tv_opacity_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Opacidad: 45%" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+    <SeekBar android:id="@+id/seekbar_opacity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="100" android:progress="45" />
+    <Button android:id="@+id/btn_save_widget" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="28dp" android:backgroundTint="#F3A87E" android:text="Guardar y Aplicar al Widget" android:textColor="#08151C" android:textStyle="bold" />
+</LinearLayout>
