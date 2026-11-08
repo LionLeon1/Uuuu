@@ -1,0 +1,34 @@
+name: Compilar APK
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        
+      - name: Extraer Proyecto
+        run: unzip *.zip
+        
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
+          
+      - name: Compilar APK
+        run: |
+          cd SynthesiscoAndroidApp
+          gradle assembleDebug
+          
+      - name: Entregar App lista
+        uses: actions/upload-artifact@v4
+        with:
+          name: Synthesisco-Widget-APK
+          path: SynthesiscoAndroidApp/app/build/outputs/apk/debug/app-debug.apk
